@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".appointment_Activity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#093c6e"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="28dp"
+            android:backgroundTint="#F6F4F4"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="28dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="Patient's information"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/search_view"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/search"
+            android:backgroundTint="#FDFCFC" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="0dp">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/doctors"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/dr"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#1B1C1C"
+                    android:visibility="gone"
+                    android:text="Patient's information"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text=" Full Name"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="#1B1C1C"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edtdesign"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Mobile No"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#171717"
+                    android:layout_marginTop="10dp"/>
+                <EditText
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edtdesign"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Email (optional)"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#0E0E0E"
+                    android:layout_marginTop="10dp"/>
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edtdesign"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="DOB"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#0E0E0E"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/DOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select your DOB"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="date"
+                    android:background="@drawable/edtdesign"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Address"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#101010"
+                    android:layout_marginTop="10dp"/>
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edtdesign"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Gender"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#111212"
+                    android:layout_marginTop="10dp"
+                    />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/groupradio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radia_id1"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp"
+                            android:text="Male"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/radia_id2"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp"
+                            android:text="Female"
+                            android:textSize="12sp" />
+
+                    </RadioGroup>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <Button
+                    android:id="@+id/bookAppointment"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Book Appointment"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#093c6e"
+                    android:layout_gravity="right"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design"
+                    android:layout_marginTop="0dp"/>
+            </LinearLayout>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- your other views here -->
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F6F8FA"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Powered By-"
+                android:layout_marginEnd="10dp"
+                android:textColor="#093c6e"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:src="@drawable/newtriangle"
+                android:layout_marginTop="0dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

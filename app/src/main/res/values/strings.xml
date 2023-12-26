@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Appointment System</string>
+    <string name="RatingBar" parent="AppTheme">
+        <item name="colorControlActivated">@color/colorRatingActivity</item>
+        <item name="colorControlNormal">@color/colorRatingInactivity</item>
+    </string>
+    <string name="hospital_address">Alyantra Medicity Super Speciality Hospital Plot No. TC-49-V-XIII,Vibhuti Khand, Gomtinagar,Lucknow, Uttar Pradesh India - 226010</string>
+
+</resources>
